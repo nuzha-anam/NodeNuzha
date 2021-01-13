@@ -1,4 +1,4 @@
-console.log('hello world');
+
 
 function add(a,b)
 {
@@ -8,4 +8,8 @@ function add(a,b)
 
 var c=10;
 var d=20;
-console.log(add(c,d));
+
+
+
+module.exports.add = add;
+module.exports.c = c;
