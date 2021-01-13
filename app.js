@@ -1,15 +1,22 @@
+const express = require('express');
+
+//express app (instanciate)
+const app = express();
+app.listen(3000);
+console.log('listening to 3000');
 
 
-function add(a,b)
-{
-    return a+b;
-}
-
-
-var c=10;
-var d=20;
+app.get('/add', (req, res) => {
+    // res.send('<h1>home page</h1>');
+    res.sendFile('./nuzha.html', { root: __dirname });
+    console.log(5+6);
+    
+  });
 
 
 
-module.exports.add = add;
-module.exports.c = c;
+app.get('/show', (req, res) => {
+    //res.send('<p>home page</p>');
+    console.log("hello");
+  });
+
